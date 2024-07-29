@@ -1,0 +1,66 @@
+<nav class="navbar bg-light fixed-top">
+  <div class="container-fluid">
+    <div style="height: 60px;" class="logo">
+      <img style="height: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/FPT_Polytechnic.png/1200px-FPT_Polytechnic.png" alt="">
+    </div>
+    <div class="text-danger fs-5 fw-bold">
+      <b ng-if="!username">Chào quý khách</b>
+      <b ng-if="username">{{ username }}</b>
+  </div>
+  
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <a style="text-decoration: none; color: darkslategray ; font-weight: bold;" href="#">Trang chủ</a> 
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+     
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+                <a class="nav-link active text-danger fw-bold" aria-current="page" href="#!Dangnhap">Đăng nhập</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-success fw-bold" href="#!dangki">Đăng kí</a>
+            </li>
+            <li class="nav-item fw-bold">
+                <a class="nav-link" href="#!quenpass">Đổi mật khẩu</a>
+            </li>
+            <li class="nav-item fw-bold">
+              <a class="nav-link" href="#!Dangnhap" ng-click="thoat()">Đăng xuất</a>
+          </li>
+         
+    
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Môn thi
+            </a>
+            <ul class="dropdown-menu">
+                <div class="card-header">
+                    <b class="mx-3">DANH MỤC</b>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="mh in Subjects">
+                          <a class="text-decoration-none fs-6" href="#!/tracnghiem/{{mh.Id}}/{{mh.Name}}">
+                            {{ mh.Name | uppercase }}
+                          </a>  
+                        </li>
+                    </ul> 
+            </div>
+            
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

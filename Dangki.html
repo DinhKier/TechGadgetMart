@@ -1,0 +1,69 @@
+<form name="frmdk">
+    <!-- Username -->
+    <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input id="username" name="username" type="text" class="form-control bg-info-subtle shadow-none" 
+               placeholder="Nhập tên đăng nhập" required ng-minlength="3" ng-model="Student.username">
+        <em class="text-danger" ng-show="frmdk.username.$invalid">Tên đăng nhập cần ít nhất 3 ký tự</em>
+    </div>
+
+    <!-- Họ và tên -->
+    <div class="mb-3">
+        <label for="fullname" class="form-label">Họ tên</label>
+        <input id="fullname" name="fullname" type="text" class="form-control bg-info-subtle shadow-none" 
+               placeholder="Nhập họ và tên" required ng-model="Student.fullname">
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" name="email" type="email" class="form-control bg-info-subtle shadow-none" 
+               placeholder="Nhập địa chỉ email" required ng-model="Student.email">
+        <em class="text-danger" ng-show="frmdk.email.$invalid">Vui lòng nhập địa chỉ email hợp lệ</em>
+    </div>
+    <!-- Password -->
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input id="password" name="password" type="password" class="form-control bg-info-subtle shadow-none" 
+               placeholder="Nhập mật khẩu" required ng-minlength="6" ng-model="Student.password">
+        <em class="text-danger" ng-show="frmdk.password.$invalid">Mật khẩu cần ít nhất 6 ký tự</em>
+    </div>
+
+    <!-- Giới tính -->
+    <div class="mb-3">
+        <label for="gender" class="form-label">Giới tính</label>
+        <select id="gender" name="gender" class="form-select bg-info-subtle shadow-none" required ng-model="Student.gender">
+            <option value="" disabled selected>-- Chọn giới tính --</option>
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+            <option value="Khác">Khác</option>
+        </select>
+        <em class="text-danger" ng-show="frmdk.gender.$invalid">Vui lòng chọn giới tính</em>
+    </div>
+
+    <!-- Ngày sinh -->
+    <div class="mb-3">
+        <label for="birthday" class="form-label">Ngày sinh</label>
+        <input id="birthday" name="birthday" type="date" class="form-control bg-info-subtle shadow-none" 
+               ng-model="Student.birthday" required>
+        <em class="text-danger" ng-show="frmdk.birthday.$invalid">Vui lòng chọn ngày sinh</em>
+    </div>
+    <!-- Học phí -->
+    <div class="mb-3">
+        <label for="schoolfee" class="form-label">Học phí</label>
+        <input id="schoolfee" name="schoolfee" type="number" class="form-control bg-info-subtle shadow-none" 
+               placeholder="Nhập học phí" ng-model="Student.sch001Fee" required>
+        <em class="text-danger" ng-show="frmdk.schoolfee.$invalid">Vui lòng nhập học phí</em>
+    </div>
+
+    <!-- Điểm số -->
+    <div class="mb-3">
+        <label for="marks" class="form-label">Điểm số</label>
+        <input id="marks" name="marks" type="number" class="form-control bg-info-subtle shadow-none" 
+               placeholder="Nhập điểm số" ng-model="Student.marks" required min="0" max="10">
+        <em class="text-danger" ng-show="frmdk.marks.$invalid">Điểm số chỉ nằm trong khoảng từ 0 đến 10</em>
+    </div>
+    <p>
+        <button ng-click="dangky()" type="button" class="btn btn-primary">Đăng ký</button>
+    </p>
+</form>

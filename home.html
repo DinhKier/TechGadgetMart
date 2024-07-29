@@ -1,0 +1,71 @@
+<div id="carouselExampleIndicators" class="carousel slide mb-5">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img style="border-radius: 10px; border:1px solid black;" src="https://img.freepik.com/premium-vector/frontend-development-web-banner-concept-website-interface-improvement-illustration_277904-4428.jpg" width="1500px"  height="450px"  class="d-block m-auto" alt="pn1">
+      </div>
+      <div class="carousel-item">
+        <img style="border-radius: 10px; border:1px solid black;" src="https://img.freepik.com/premium-vector/frontend-development-web-banner-concept-website-interface_277904-4191.jpg" width="1500px"  height="450px"  class="d-block m-auto"  alt="pn2">
+      </div>
+      <div class="carousel-item">
+        <img style="border-radius: 10px; border:1px solid black;" src="https://static.vecteezy.com/system/resources/previews/019/469/058/original/front-end-development-minimal-infographic-banner-vector.jpg" width="1500px"  height="450px"  class="d-block m-auto"  alt="pn3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+   
+   
+   <div class="card col-12 mb-5">
+      <div class="card-body col-12">
+        <h5 class="card-title fw-bold">
+         Các khóa học nổi bật
+      </h5>
+      <div class="row">
+        <div class="col-lg-3 col-sm-6" ng-repeat="item in nb |limitTo :pageSize: start">
+            <div class="card h-100">
+                <a href="#"><img class="card-img-top" ng-src="{{ item.image }}"></a>
+                <div class="card-body">
+                    <h4 class="card-title">{{ item.title }}</h4>
+                </div>
+            </div>
+        </div>  
+    </div>
+ 
+    
+
+           
+ 
+      <div class="card">
+      <h1 class="text-danger fs-4 fw-bold card-header">Danh mục môn thi</h1>
+      <div class="row row-cols-1 row-cols-md-4 mx-1">
+          <div class="card text-center" ng-repeat="mh in Subjects">
+              <div class="card-body">
+                  <a href="#">
+                      <img class="w-45 me-auto" ng-src="images/logos/{{mh.Id}}.jpg">
+                  </a>
+              </div>
+              <div class="card-footer text-body-secondary">{{mh.Name | uppercase}}</div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+      
+
+
+
+
+     
+   

@@ -1,0 +1,27 @@
+<!-- Username -->
+<form name="frdn" class="container pt-5">
+    <div class="row border border-primary col-8 m-auto bg-primary-subtle" style="height: 300px;">
+        <div class="col-6 m-auto text-center">
+
+  
+<div class="mb-3">
+    <input required ng-model="u" name="username" type="text" class="form-control bg-success" placeholder="Tên đăng nhập">
+    <em class="text-danger" ng-show="frdn.username.$invalid">Vui lòng nhập tên tài khoản </em>
+</div>
+
+<!-- Password -->
+<div class="mb-3">
+    <input required ng-model="p" name="Password" type="password" class="form-control bg-success" placeholder="Mật khẩu">
+    <em class="text-danger" ng-show="frdn.Password.$invalid">Vui lòng nhập mật khẩu</em>
+</div>
+
+ <div>
+    <a class="nav-link text-success text-start" href="#!doipass">Quên mật khẩu</a>
+</div>
+
+<!-- Nút Đăng nhập -->
+<button ng-click="dangnhap()" class="btn btn-primary">Đăng nhập</button> 
+ </div>
+</div>
+
+</form>
